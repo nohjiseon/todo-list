@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* Reset */
+/* rem 단위를 쓸 경우 html 폰트사이즈를 기준으로 계산된다 */
+/* body 폰트 사이즈를 10px 을 10으로 나눈 값인 1rem 으로 기준 잡아주어야 한다 */
+html { font-size: 10px; }
+body * { outline: none; box-sizing: border-box; }
+html,body,h1,h2,h3,h4,h5,h6,div,p,blockquote,pre,code,address,ul,ol,li,menu,nav,section,article,aside,
+dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,figcaption {margin:0;padding:0;}
+body{background:#fff;-webkit-text-size-adjust:none;word-wrap:break-word;word-break:keep-all;}
+body,input,select,textarea,pre { border:none; font-size:1.6rem; font-family: 'Nanum Gothic', sans-serif; color:#000; margin: 0 auto; }
+button { border:none; font-family: 'Nanum Gothic', sans-serif; color:#fff; outline: none; cursor: pointer; background-color: transparent; }
+ul,ol,li{list-style:none;}
+table{ border-spacing:0; }
+img,fieldset{border:0;}
+address,cite,code,em{font-style:normal;font-weight:normal;}
+label,img,input,select,textarea,button{vertical-align:middle;}
+.hide,legend{overflow: hidden; display:block; position:absolute; border: 0; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px);}
+hr{display:none;}
+main,header,section,nav,footer,aside,article,figure{display:block;}
+a{color:#000;text-decoration:none;}
+pre{ white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; white-space: pre-wrap; word-wrap: break-word; color: #000; line-height: 3rem; }
+
+
+/* 공통 메인 */
+main:not(.made) {margin-top: 11.2rem; padding: 3rem 2rem; min-height: calc(100vh - 16.2rem); border-top-left-radius: 7rem; background: #d0dcf9 url('./images/mainBack.png') no-repeat right bottom -5rem / 33.8rem;}
+main:not(.made) > img { display: block; height: 2.5rem; margin: 0 0 2rem auto; }
+
+/* 공통 할일 리스트 */
+.todo_list li { display: flex; align-items: center; justify-content: space-between; padding: 0 1.6rem; height: 5rem; background-color: #fff; border-radius: 1.2rem; }
+.todo_list li ~ li { margin-top: 2rem; }
+.todo_list .list_chk + label { position: relative; padding-left: 3rem; background: url('./images/un_check.png') no-repeat left center / 1.8rem; cursor: pointer; }
+.todo_list .list_chk:checked + label { background-image: url('./images/check.png') }
+.todo_list li.active { background-color: #EDEDED; }
+.todo_list li.active label { color: #B4B4B4; text-decoration: line-through; }
+
+
